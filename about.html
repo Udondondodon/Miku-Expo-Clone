@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en" style="background-image: url('https://i.redd.it/zso9n2s3rmd11.jpg')">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="build.css">
+        <title>HATSUNE MIKU EXPO</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/ae/f3/a4/aef3a456-e774-8dc2-8be8-38530c30ede5/4511820-93201.jpg/1200x1200bf-60.jpg">
+    </head>
+
+<style>
+#mobile-menu.active {
+    display: block;
+}
+
+.sidenav a {
+  position: relative;
+}
+.sidenav a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+.sidenav a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+@font-face {
+    font-family: "Hiragino";
+    src: url("font/Hiragino\ Kaku\ Gothic\ ProN\ W3.otf") format("truetype");
+}
+
+</style>
+<body>
+    <div class="fixed">
+        <div class="lg:block hidden top-0 left-0 w-36 h-screen bg-white">
+            <div class="flex text-center font-thin font-sans justify-center">
+                <ul class="list text-lg">
+                    <li class=""><a href="index.html"><img class="w-20 h-20" src="https://mikuexpo.com/images/logo_square.svg" alt=""></a></li>  
+                    <li class="pt-4 sidenav"><a href="about.html">ABOUT</a></li>
+                    <li class="pt-5 sidenav"><a href="">GALLERY</a></li>
+                    <li class="pt-5 sidenav"><a href="">SPECIAL</a></li>
+                    <li class="pt-5 sidenav"><a href="">HISTORY</a></li>
+                </ul>
+            </div>
+            <div class="flex justify-center">
+                <ul class="web bottom-0 absolute">
+                  <li class="py-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_twitter.svg" alt=""></a></li>
+                  <li class="py-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_facebook.svg" alt=""></a></li>
+                  <li class="py-3 pb-10"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_instagram.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md lg:hidden">
+        <div class="flex justify-between items-center py-3 px-4">
+            <div>
+                <a href="index.html">
+                <img class="w-20 h-20" src="https://mikuexpo.com/images/logo_square.svg" alt="">
+                </a>
+            </div>
+            <div>
+                <button id="mobile-menu-btn">
+                    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                        <path fill-rule="evenodd" d="M21 18H3a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2zM21 13H3a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2zM21 8H3a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2z" clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden">
+            <ul class="list text-lg text-center py-4">
+                <li class="py-3 sidenav"><a href="about.html">ABOUT</a></li>
+                <li class="py-3 sidenav"><a href="">GALLERY</a></li>
+                <li class="py-3 sidenav"><a href="">SPECIAL</a></li>
+                <li class="py-3 sidenav"><a href="">HISTORY</a></li>
+            </ul>
+        <ul class="list text-lg flex justify-center py-5">
+            <li class="px-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_twitter.svg" alt=""></a></li>
+            <li class="px-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_facebook.svg" alt=""></a></li>
+            <li class="px-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_instagram.svg" alt=""></a></li>
+        </ul>
+        </div>
+    </nav>
+    <main class="max-w-7xl p-5 mx-auto">
+        <div class="grid grid-cols-3 gap-4">
+            <div class="col-span-3 md:col-span-2 mb-28">
+                <h1 class="font-bold font-hira tracking-widest text-white text-4xl py-10 mt-16 border-b-2 border-white md:pl-36 justify-start">What is MIKU EXPO?</h1>
+                <p class="font-hira text-sm leading-8 text-white md:pl-36 pt-5">HATSUNE MIKU EXPO is a world concert tour, organized by Crypton Future Media, <br> that brings along a variety of sub-events (exhibitions, workshops, club events ...) where fans of all backgrounds can meet up and share various aspects of the <br> creative culture surrounding Hatsune Miku.</h1></p>
+            </div>
+            <div class="col-span-3 md:col-span-2 row-start-2">
+                <h1 class="font-bold font-hira tracking-widest text-white text-4xl pb-10 border-b-2 border-white md:pl-36 justify-start">What is HATSUNE MIKU?</h1>
+                <p class="font-hira text-sm leading-8 text-white md:pl-36 pt-5">Hatsune Miku is a Japanese music sensation, a 16 year-old blue-haired girl with a unique voice and prodigious energy. <br class="h-10">
+
+                What makes her special is that she is not a human singer, but a virtual persona who uses a computer-generated voice and 3D graphics to perform on stage. With a repertoire entirely provided by individual creators, she is the first truly crowd-created virtual talent. But being virtual doesn't stop her from filling up concert halls, or teaming up with major artists like Lady Gaga and Pharrell Williams! <br>
+                    
+                Internationally popular, with over 2.5 million followers on Facebook, the increasing demand for concerts overseas paved the way to Miku Expo, a world tour that has so far taken her from Indonesia to Los Angeles, New York and Shanghai, with a memorable TV stop at the David Letterman show.</p>
+            </div>
+            <div class="md:row-start-2 row-start-3 md:col-start-3 col-start-2 md:self-center">
+                <img src="https://mikuexpo.com/images/about_miku.png" class="w-72 md:w-80 h-auto" alt="">
+            </div>
+        </div> 
+    </main>
+    </body>
+</html>
+
+<script>
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+      
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});
+</script>

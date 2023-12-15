@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" style="background-image: url('https://i.redd.it/zso9n2s3rmd11.jpg')">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="output.css">
+        <title>HATSUNE MIKU EXPO</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&family=Montserrat&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://is5-ssl.mzstatic.com/image/thumb/Music125/v4/ae/f3/a4/aef3a456-e774-8dc2-8be8-38530c30ede5/4511820-93201.jpg/1200x1200bf-60.jpg">
+    </head>
+
+<style>
+#mobile-menu.active {
+    display: block;
+  }
+
+#miku1:hover {
+    transform: scale(1.1, 1.1);
+    transform-origin: right bottom;
+    z-index: 1;
+}
+
+#miku1:not(:hover) {
+  transform: scale(1, 1);
+  transform-origin: right bottom;
+  z-index: 0;
+}
+
+#miku1 {
+  transition: transform 1s ease-in-out;
+}
+
+#miku2:hover {
+    transform: scale(1.1, 1.1);
+    transform-origin: left bottom;
+    z-index: 1;
+}
+
+#miku2:not(:hover) {
+  transform: scale(1, 1);
+  transform-origin: left bottom;
+  z-index: 0;
+}
+
+#miku2 {
+  transition: transform 1s ease-in-out;
+}
+
+#miku1:hover ~ #miku3:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 1;
+  content: "";
+  display: block;
+  left : 0;
+  height: 8px;
+  position: absolute;
+  background: #FFF;
+  transition: width 1s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+#miku1:hover ~ #miku3:after { 
+  width: 100%; 
+  left: 0; 
+}
+
+#miku3 {
+  color: #fff;
+  text-decoration: none;
+}
+#miku3:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 1;
+  content: "";
+  display: block;
+  left : 0;
+  height: 8px;
+  position: absolute;
+  background: #FFF;
+  transition: width 1s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+#miku2:hover ~ #miku4:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 1;
+  content: "";
+  display: block;
+  right : 0;
+  height: 8px;
+  position: absolute;
+  background: #FFF;
+  transition: width 1s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+#miku2:hover ~ #miku4:after { 
+  width: 100%; 
+  right: 0; 
+}
+
+#miku4 {
+  color: #fff;
+  text-decoration: none;
+}
+#miku4:after {    
+  background: none repeat scroll 0 0 transparent;
+  bottom: 1;
+  content: "";
+  display: block;
+  right : 0;
+  height: 8px;
+  position: absolute;
+  background: #FFF;
+  transition: width 1s ease 0s, left 0.3s ease 0s;
+  width: 0;
+}
+
+.sidenav a {
+  position: relative;
+}
+.sidenav a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0%;
+  height: 2px;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+.sidenav a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+@keyframes translate-left {
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes translate-right {
+  from {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes translate-up {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-translate-left {
+  animation-name: translate-left;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.animate-translate-right {
+  animation-name: translate-right;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+.animate-translate-up {
+  animation-name: translate-up;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-delay: 0.5s;
+}
+
+@media (max-width: 1280px) {
+  .logo_head {
+    margin-top: 100px;
+  }
+}
+
+@font-face {
+    font-family: "Hiragino";
+    src: url("font/Hiragino\ Kaku\ Gothic\ ProN\ W3.otf") format("truetype");
+}
+
+</style>
+
+<body>
+    <div class="fixed top-0 left-0">
+        <div class="hidden xl:block w-36 h-screen bg-white">
+            <div class="flex text-center font-thin font-sans justify-center">
+                <ul class="list text-lg">
+                    <li class=""><a href="index.html"><img class="w-20 h-20" src="https://mikuexpo.com/images/logo_square.svg" alt=""></a></li>  
+                    <li class="pt-4 sidenav"><a href="about.html">ABOUT</a></li>
+                    <li class="pt-5 sidenav"><a href="">GALLERY</a></li>
+                    <li class="pt-5 sidenav"><a href="">SPECIAL</a></li>
+                    <li class="pt-5 sidenav"><a href="">HISTORY</a></li>
+                </ul>
+            </div>
+            <div class="flex justify-center">
+                <ul class="web bottom-0 absolute">
+                  <li class="py-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_twitter.svg" alt=""></a></li>
+                  <li class="py-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_facebook.svg" alt=""></a></li>
+                  <li class="py-3 pb-10"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_instagram.svg" alt=""></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <nav class="fixed top-0 left-0 w-full bg-white shadow-md xl:hidden" style="z-index: 4;">
+        <div class="flex justify-between items-center py-3 px-4">
+        <div>
+            <a href="index.html">
+                <img class="w-20 h-20" src="https://mikuexpo.com/images/logo_square.svg" alt="">
+            </a>
+        </div>
+        <div>
+            <button id="mobile-menu-btn">
+            <svg class="w-6 h-6 mr-4" viewBox="0 0 24 24" fill="currentColor">
+                <path fill-rule="evenodd" d="M21 18H3a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2zM21 13H3a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2zM21 8H3a1 1 0 0 1 0-2h18a1 1 0 0 1 0 2z" clip-rule="evenodd" />
+            </svg>
+            </button>
+        </div>
+        </div>
+        <div id="mobile-menu" class="hidden">
+        <ul class="list text-lg text-center py-4">
+            <li class="py-3 sidenav"><a href="about.html">ABOUT</a></li>
+            <li class="py-3 sidenav"><a href="">GALLERY</a></li>
+            <li class="py-3 sidenav"><a href="">SPECIAL</a></li>
+            <li class="py-3 sidenav"><a href="">HISTORY</a></li>
+        </ul>
+        <ul class="list text-lg flex justify-center py-5">
+            <li class="px-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_twitter.svg" alt=""></a></li>
+            <li class="px-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_facebook.svg" alt=""></a></li>
+            <li class="px-3"><a href=""><img class="w-8 h-8" src="https://mikuexpo.com/images/head_menu_instagram.svg" alt=""></a></li>
+        </ul>
+        </div>
+    </nav>
+    <main class="max-w-7xl p-5 mx-auto my-5">
+        <div>
+            <div class="flex justify-end mb-5">
+                <img class="max-w-2xl relative logo_head" src="https://mikuexpo.com/images/expo_logo_white.svg" alt=""> 
+            </div>
+            <div class="flex justify-end">
+                <span class="font-bold text-white flex justify-end">MIKU EXPO</span>
+                <span class="text-white flex justify-end" style="font-size:10px;">®</span>
+                <span class="text-white"> is Hatsune Miku's world concert tour</span>
+            </div>
+            <div class="flex justify-end">
+                <span class="text-white mb-48">presented by Crypton Future Media!</span>
+            </div>
+            <div class="relative mb-72 js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/hero_event_bg_vr2023.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20 justify-end">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/hero_event_miku_vr2023.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2023 VR</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 sm:ml-24 js-show-on-scroll-1">
+                <div class="flex items-end justify-start">
+                    <div class="relative z-10">
+                        <img id="miku2" class="relative" src="https://mikuexpo.com/images/pasteve_bg_rewind2022.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-start">
+                        <div class="relative z-20">
+                            <img id="miku2" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_rewind2022.png" style="width: 500px;">
+                            <div id="miku4" class="absolute bottom-0 right-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>REWIND</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/pasteve_bg_online2021.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_online2021.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2021 ONLINE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 sm:ml-24 js-show-on-scroll-1">
+                <div class="flex items-end justify-start">
+                    <div class="relative z-10">
+                        <img id="miku2" class="relative" src="https://mikuexpo.com/images/pasteve_bg_usaca2020.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-start">
+                        <div class="relative z-20">
+                            <img id="miku2" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_usaca2020.png" style="width: 500px;">
+                            <div id="miku4" class="absolute bottom-0 right-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2020 USA & CANADA</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/pasteve_bg_europe2020.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_europe2020.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2020 EUROPE</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 sm:ml-24 js-show-on-scroll-1">
+                <div class="flex items-end justify-start">
+                    <div class="relative z-10">
+                        <img id="miku2" class="relative" src="https://mikuexpo.com/images/pasteve_bg_twhk2019.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-start">
+                        <div class="relative z-20">
+                            <img id="miku2" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_twhk2019.png" style="width: 500px;">
+                            <div id="miku4" class="absolute bottom-0 right-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2019 Taiwan & Hong Kong</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/pasteve_bg_usamx2018.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_usamx2018.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2018 USA & Mexico</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 sm:ml-24 js-show-on-scroll-1">
+                <div class="flex items-end justify-start">
+                    <div class="relative z-10">
+                        <img id="miku2" class="relative" src="https://mikuexpo.com/images/pasteve_bg_may2017.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-start">
+                        <div class="relative z-20">
+                            <img id="miku2" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_may2017.png" style="width: 500px;">
+                            <div id="miku4" class="absolute bottom-0 right-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2017 in Malaysia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/pasteve_bg_cn2016.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_cn2016.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2016 China Tour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 sm:ml-24 js-show-on-scroll-1">
+                <div class="flex items-end justify-start">
+                    <div class="relative z-10">
+                        <img id="miku2" class="relative" src="https://mikuexpo.com/images/pasteve_bg_tw2016.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-start">
+                        <div class="relative z-20">
+                            <img id="miku2" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_tw2016.png" style="width: 500px;">
+                            <div id="miku4" class="absolute bottom-0 right-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2016 in Taiwan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/pasteve_bg_na2016.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_na2016.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2016 North America</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 sm:ml-24 js-show-on-scroll-1">
+                <div class="flex items-end justify-start">
+                    <div class="relative z-10">
+                        <img id="miku2" class="relative" src="https://mikuexpo.com/images/pasteve_bg_jp2016.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-start">
+                        <div class="relative z-20">
+                            <img id="miku2" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_jp2016.png" style="width: 500px;">
+                            <div id="miku4" class="absolute bottom-0 right-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2016 Japan Tour</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/pasteve_bg_sh2015.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_sh2015.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2015 in Shanghai</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative mb-72 sm:ml-24 js-show-on-scroll-1">
+                <div class="flex items-end justify-start">
+                    <div class="relative z-10">
+                        <img id="miku2" class="relative" src="https://mikuexpo.com/images/pasteve_bg_us2014.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-start">
+                        <div class="relative z-20">
+                            <img id="miku2" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_us2014.png " style="width: 500px;">
+                            <div id="miku4" class="absolute bottom-0 right-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2014 in New York</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative js-show-on-scroll-2">
+                <div class="flex items-end justify-end">
+                    <div class="relative z-10">
+                        <img id="miku1" class="relative" src="https://mikuexpo.com/images/pasteve_bg_id2014.png" style="width: 500px;">
+                    </div>
+                    <div class="absolute top-0 left-0 w-full h-full flex items-end justify-end">
+                        <div class="relative z-20">
+                            <img id="miku1" class="bg-contain" src="https://mikuexpo.com/images/pasteve_miku_id2014.png" style="width: 500px;">
+                            <div id="miku3" class="absolute bottom-0 left-0 p-8 sm:p-4">
+                                <p class="text-white font-bold text-3xl transform sm:text-4xl sm:block js-show-on-scroll-3">HATSUNE MIKU EXPO <br>2014 in Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
+
+<script>
+
+const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+});
+
+const callback1 = function (entries) {
+  entries.forEach((entry) => {
+    console.log(entry);
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-translate-left");
+    }
+  });
+};
+
+const observer1 = new IntersectionObserver(callback1);
+
+const targets1 = document.querySelectorAll(".js-show-on-scroll-1");
+targets1.forEach(function (target) {
+  target.classList.add("opacity-0");
+  observer1.observe(target);
+});
+
+const callback2 = function (entries) {
+  entries.forEach((entry) => {
+    console.log(entry);
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-translate-right");
+    }
+  });
+};
+
+const observer2 = new IntersectionObserver(callback2);
+
+const targets2 = document.querySelectorAll(".js-show-on-scroll-2");
+targets2.forEach(function (target) {
+  target.classList.add("opacity-0");
+  observer2.observe(target);
+});
+
+const callback3 = function (entries) {
+  entries.forEach((entry) => {
+    console.log(entry);
+
+    if (entry.isIntersecting) {
+      entry.target.classList.add("animate-translate-up");
+    }
+  });
+};
+
+const observer3 = new IntersectionObserver(callback3);
+
+const targets3 = document.querySelectorAll(".js-show-on-scroll-3");
+targets3.forEach(function (target) {
+  target.classList.add("opacity-0");
+  observer3.observe(target);
+});
+
+</script>
